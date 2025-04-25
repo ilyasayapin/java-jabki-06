@@ -1,6 +1,6 @@
 public class Wallet {
 
-    String owner = "Илья";
+    String owner;
     double money;
 
     public void displayInfo() {
