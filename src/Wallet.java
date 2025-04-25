@@ -4,7 +4,10 @@ public class Wallet {
     double money;
 
     public void displayInfo() {
-        System.out.println("Владелец кошелька: " + owner);
-        System.out.println("Баланс кошелька: " + money);
+        System.out.printf("Владелец кошелька: %s, Баланс кошелька: %s",
+                this.owner,
+                this.money
+        );
+
     }
 }
