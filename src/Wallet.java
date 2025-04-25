@@ -1,5 +1,5 @@
 public class Wallet {
 
-    String owner;
+    String owner = "Илья";
     double money;
 }
