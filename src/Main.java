@@ -134,5 +134,12 @@ public class Main {
 
         Wallet wallet = new Wallet();
         wallet.displayInfo();
+        wallet = new Wallet("Петя");
+        wallet.displayInfo();
+        wallet = new Wallet(10);
+        wallet.displayInfo();
+        wallet = new Wallet("Вася", 15);
+        wallet.displayInfo();
+
     }
 }
