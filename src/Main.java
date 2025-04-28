@@ -138,6 +138,9 @@ public class Main {
         Game game = new Game();
         System.out.println(game.getNumber());
 
+        TVset tvset = new TVset();
+
+
 
     }
 }

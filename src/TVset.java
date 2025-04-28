@@ -1,5 +1,12 @@
+import javax.swing.*;
+
 public class TVset {
     private int currentChannel, volume;
+
+    TVset() {
+        this.currentChannel = 1;
+        this.volume = 50;
+    }
 
     public void setChannel(int numOfChannel) {
         if (numOfChannel < 1 || numOfChannel > 50) {
@@ -22,6 +29,10 @@ public class TVset {
 
     public int getVolume() {
         return this.volume;
+        }
     }
 
+    private void nextChannel() {
+     this.currentChannel += 1;
+        }
 }
