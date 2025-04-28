@@ -21,4 +21,12 @@ public class Order {
         return items;
     }
 
+    public void displayCurrentOrder() {
+        System.out.printf(
+                "Номер заказа: %s/.\n Список покупок: %s.\n Стоимость итого: %s.",
+                this.orderId,
+                this.items,
+                this.totalPrice
+        );
+    }
 }
