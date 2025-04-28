@@ -139,9 +139,12 @@ public class Main {
         System.out.println(game.getNumber());
 
         TVset tvset = new TVset();
+        System.out.println(tvset.getCurrentChannel());
+        System.out.println(tvset.getVolume());
 
         Order order = new Order();
         order.displayCurrentOrder();
+
 
 
     }

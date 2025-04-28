@@ -29,4 +29,15 @@ public class Order {
                 this.totalPrice
         );
     }
+
+    public void addItem(String name, int price) {
+        if (name.equals("") || price < 0) {
+            throw new IllegalArgumentException("Проверьте данные заказа");
+        } else {
+            this.orderId += 1;
+            this.items = this.items + ", " + name;
+            this.totalPrice = this.totalPrice + price;
+        }
+    }
 }
+
