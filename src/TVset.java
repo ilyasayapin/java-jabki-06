@@ -8,7 +8,7 @@ public class TVset {
         this.currentChannel = numOfChannel;
     }
 
-    public void setVolume(int newVolume){
+    public void setVolume(int newVolume) {
         if (newVolume < 0 || newVolume > 100) {
             throw new IllegalArgumentException("Громкость должна быть от 0 до 100");
         } else {
