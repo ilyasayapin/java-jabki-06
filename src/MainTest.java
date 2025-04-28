@@ -59,4 +59,24 @@ class MainTest {
         Assertions.assertEquals("Меньше", game.chekGuess(x-1));
         Assertions.assertEquals("Угадал", game.chekGuess(x));
     }
+
+    @Test
+    void tvsetTest() {
+        TVset tvset = new TVset();
+        Assertions.assertEquals(1, tvset.getCurrentChannel());
+        Assertions.assertEquals(50, tvset.getVolume());
+
+        tvset.setChannel(10);
+        Assertions.assertEquals(10, tvset.getCurrentChannel());
+        Assertions.assertThrows(IllegalArgumentException.class, () -> tvset.setChannel(0));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> tvset.setChannel(-1));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> tvset.setChannel(51));
+
+        tvset.setVolume(0);
+        Assertions.assertEquals(0, tvset.getVolume());
+        Assertions.assertThrows(IllegalArgumentException.class, () -> tvset.setVolume(-1));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> tvset.setChannel(101));
+
+
+    }
 }
