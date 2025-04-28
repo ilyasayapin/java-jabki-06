@@ -12,8 +12,10 @@ public class TVset {
         if (numOfChannel < 1 || numOfChannel > 50) {
             throw new IllegalArgumentException("Номер канала должен быть от 1 до 50");
         } else {
-        this.currentChannel = numOfChannel;
+            this.currentChannel = numOfChannel;
+        }
     }
+
 
     public void setVolume(int newVolume) {
         if (newVolume < 0 || newVolume > 100) {
@@ -30,9 +32,8 @@ public class TVset {
     public int getVolume() {
         return this.volume;
         }
-    }
 
-    private void nextChannel() {
+    private void Channel() {
      this.currentChannel += 1;
-        }
+    }
 }
