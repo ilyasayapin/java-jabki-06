@@ -23,7 +23,7 @@ public class Order {
 
     public void displayCurrentOrder() {
         System.out.printf(
-                "Номер заказа: %s/.\n Список покупок: %s.\n Стоимость итого: %s.",
+                "Номер заказа: %s.\nСписок покупок: %s.\nСтоимость итого: %s.",
                 this.orderId,
                 this.items,
                 this.totalPrice

@@ -140,7 +140,8 @@ public class Main {
 
         TVset tvset = new TVset();
 
-
+        Order order = new Order();
+        order.displayCurrentOrder();
 
 
     }
