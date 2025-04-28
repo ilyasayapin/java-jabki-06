@@ -54,9 +54,11 @@ class MainTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> game.chekGuess(101));
         Assertions.assertThrows(IllegalArgumentException.class, () -> game.chekGuess(-5));
 
-//        int x = game.getNumber();
-//        int y = x + 1;
-//        Assertions.assertEquals("Больше", game.chekGuess(y));
+        int x = game.getNumber();
+        Assertions.assertEquals("Больше", game.chekGuess(x+1));
+        Assertions.assertEquals("Меньше", game.chekGuess(x-1));
+        Assertions.assertEquals("Угадал", game.chekGuess(x));
+
 
     }
 }
