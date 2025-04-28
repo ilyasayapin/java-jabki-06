@@ -58,7 +58,5 @@ class MainTest {
         Assertions.assertEquals("Больше", game.chekGuess(x+1));
         Assertions.assertEquals("Меньше", game.chekGuess(x-1));
         Assertions.assertEquals("Угадал", game.chekGuess(x));
-
-
     }
 }
