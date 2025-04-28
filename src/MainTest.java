@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 class MainTest {
 
 //    @Test
@@ -34,20 +36,27 @@ class MainTest {
 
         wallet.deposite(100);
         Assertions.assertEquals(100.0, wallet.getBalance());
-
-        wallet.deposite(-100);
-        Assertions.assertEquals(100.0, wallet.getBalance());
-
-        wallet.spend(50);
-        Assertions.assertEquals(50.0, wallet.getBalance());
+        Assertions.assertThrows(IllegalArgumentException.class, () -> wallet.deposite(-100));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> wallet.deposite(0));
 
         wallet.spend(90);
-        Assertions.assertEquals(50.0, wallet.getBalance());
+        Assertions.assertEquals(10.0, wallet.getBalance());
+        Assertions.assertThrows(IllegalArgumentException.class, () -> wallet.spend(-100));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> wallet.spend(0));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> wallet.spend(11));
 
-        wallet.spend(-50);
-        Assertions.assertEquals(50.0, wallet.getBalance());
+    }
 
-        wallet.spend(50);
-        Assertions.assertEquals(0.0, wallet.getBalance());
+    @Test
+    void gameTest() {
+        Game game = new Game();
+        Assertions.assertThrows(IllegalArgumentException.class, () -> game.chekGuess(0));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> game.chekGuess(101));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> game.chekGuess(-5));
+
+//        int x = game.getNumber();
+//        int y = x + 1;
+//        Assertions.assertEquals("Больше", game.chekGuess(y));
+
     }
 }

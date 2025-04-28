@@ -135,6 +135,9 @@ public class Main {
         Wallet wallet = new Wallet();
         wallet.displayInfo();
 
+        Game game = new Game();
+        System.out.println(game.getNumber());
+
 
     }
 }

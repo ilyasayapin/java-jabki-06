@@ -35,10 +35,10 @@ public class Wallet {
         }
 
     public void deposite(double amount) {
-        if (amount > 0) {
-            ballance += amount;
+        if (amount <= 0) {
+            throw new IllegalArgumentException("Введите положительное число");
         } else {
-            System.out.println("Введите положительное число");
+            ballance += amount;
         }
     }
 
@@ -47,10 +47,10 @@ public class Wallet {
             if (this.ballance >= amount) {
                 ballance -= amount;
             } else {
-                System.out.println("Баланс не может уйти в минус");
+                throw new IllegalArgumentException("Баланс не может уйти в минус");
             }
         } else {
-            System.out.println("Введите положительное число");
+            throw new IllegalArgumentException("Введите положительное число");
         }
     }
 }
