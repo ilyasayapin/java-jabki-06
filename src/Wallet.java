@@ -1,10 +1,10 @@
 public class Wallet {
 
-    private String owner = "Супермен";
+    private String owner;
     private double ballance;
 
     Wallet() {
-        this.owner = "Не известно";
+        this.owner = "Супермен";
         this.ballance = 0;
     }
 
