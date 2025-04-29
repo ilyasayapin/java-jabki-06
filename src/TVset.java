@@ -34,6 +34,11 @@ public class TVset {
         }
 
     private void Channel() {
-     this.currentChannel += 1;
+        if (this.currentChannel == 50) {
+            this.currentChannel = 1;
+        } else {
+            this.currentChannel += 1;
+        }
+
     }
 }
