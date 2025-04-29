@@ -1,3 +1,5 @@
+import org.junit.jupiter.api.Test;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -139,8 +141,8 @@ public class Main {
         System.out.println(game.getNumber());
 
         TVset tvset = new TVset();
-        System.out.println(tvset.getCurrentChannel());
-        System.out.println(tvset.getVolume());
+        System.out.println("Канал: " + tvset.getCurrentChannel());
+        System.out.println("Громкость: " + tvset.getVolume());
 
         Order order = new Order();
         order.displayCurrentOrder();

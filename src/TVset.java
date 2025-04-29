@@ -33,7 +33,7 @@ public class TVset {
         return this.volume;
         }
 
-    private void Channel() {
+    public void channel() {
         if (this.currentChannel == 50) {
             this.currentChannel = 1;
         } else {
