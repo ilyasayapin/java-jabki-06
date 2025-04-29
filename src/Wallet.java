@@ -7,17 +7,6 @@ public class Wallet {
         this.owner = "Супермен";
         this.ballance = 0;
     }
-
-    Wallet(String owner) {
-        this.owner = owner;
-        this.ballance = 0;
-    }
-
-    Wallet(int money) {
-        this.owner = "Не известно";
-        this.ballance = money;
-    }
-
     Wallet(String owner, int money) {
         this.owner = owner;
         this.ballance = money;
