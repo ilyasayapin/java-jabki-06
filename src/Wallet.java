@@ -15,26 +15,26 @@ public class Wallet {
     public void displayInfo() {
         System.out.printf("Владелец кошелька: %s. Баланс кошелька: %s\n",
                 this.owner,
-                this.ballance
+                this.money
         );
     }
 
     public double getBalance() {
-        return this.ballance;
+        return this.money;
         }
 
     public void deposite(double amount) {
         if (amount <= 0) {
             throw new IllegalArgumentException("Введите положительное число");
         } else {
-            ballance += amount;
+            money += amount;
         }
     }
 
     public void spend(int amount) {
         if (amount > 0) {
-            if (this.ballance >= amount) {
-                ballance -= amount;
+            if (this.money >= amount) {
+                money -= amount;
             } else {
                 throw new IllegalArgumentException("Баланс не может уйти в минус");
             }
