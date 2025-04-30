@@ -1,15 +1,15 @@
 public class Wallet {
 
     private String owner;
-    private double ballance;
+    private double money;
 
     Wallet() {
         this.owner = "Супермен";
-        this.ballance = 0;
+        this.money = 0;
     }
     Wallet(String owner, int money) {
         this.owner = owner;
-        this.ballance = money;
+        this.money = money;
     }
 
     public void displayInfo() {

@@ -4,7 +4,7 @@ public class Order {
     private double totalPrice;
 
     Order() {
-        this.orderId = 1;
+        this.orderId = int()(ra);
         this.items = "Вещь 1, Вещь 2, Вещь 3";
         this.totalPrice = 100;
     }
