@@ -33,15 +33,11 @@ public class Wallet {
     }
 
     public void spend(int amount) {
-        if (amount > 0) {
-            if (this.money >= amount) {
-                money -= amount;
-            } else {
-                throw new IllegalArgumentException("Баланс не может уйти в минус");
-            }
-        } else {
+        if (amount <= 0) {
             throw new IllegalArgumentException("Введите положительное число");
-        }
+        } else if (this.money <= amount) {
+            throw new IllegalArgumentException("Баланс не может уйти в минус");
+        } money -= amount;
     }
 }
 
