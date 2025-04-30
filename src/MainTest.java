@@ -76,26 +76,23 @@ class MainTest {
         Assertions.assertEquals(0, tvset.getVolume());
         Assertions.assertThrows(IllegalArgumentException.class, () -> tvset.setVolume(-1));
         Assertions.assertThrows(IllegalArgumentException.class, () -> tvset.setChannel(101));
+
+        tvset.setChannel(50);
+        tvset.nextChannel();
+        Assertions.assertEquals(1, tvset.getCurrentChannel());
     }
 
     @Test
     void orderTest() {
         Order order = new Order();
-        Assertions.assertEquals(1, order.getOrderId());
-        Assertions.assertEquals("Вещь 1, Вещь 2, Вещь 3", order.getitems());
-        Assertions.assertEquals(100, order.getTotalPrice());
+        Assertions.assertEquals(0, order.getItems().size());
+        Assertions.assertEquals(0, order.getTotalPrice());
 
         order.addItem("Новая вещь", 43);
-        Assertions.assertEquals("Вещь 1, Вещь 2, Вещь 3, Новая вещь", order.getitems());
-        Assertions.assertEquals(143, order.getTotalPrice());
+        Assertions.assertTrue(order.getItems().contains("Новая вещь"));
+        Assertions.assertEquals(43, order.getTotalPrice());
         Assertions.assertThrows(IllegalArgumentException.class, () -> order.addItem("Тест1", -1));
         Assertions.assertThrows(IllegalArgumentException.class, () -> order.addItem("", 20));
         Assertions.assertThrows(IllegalArgumentException.class, () -> order.addItem("", -5));
-        Assertions.assertEquals(2, order.getOrderId());
-
-
-
-
     }
-
 }
