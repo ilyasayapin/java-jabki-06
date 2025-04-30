@@ -5,30 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class MainTest {
 
-//    @Test
-//    void accountTest() {
-//        Account account = new Account();
-//        Assertions.assertEquals(0.0, account.getBalance());
-//
-//        account.deposit(100);
-//        Assertions.assertEquals(100.0, account.getBalance());
-//
-//        account.deposit(80);
-//        Assertions.assertEquals(180.0, account.getBalance());
-//
-//        account.withdraw(-100);
-//        Assertions.assertEquals(180.0, account.getBalance());
-//
-//        account.withdraw(100);
-//        Assertions.assertEquals(80.0, account.getBalance());
-//
-//        account.withdraw(80);
-//        Assertions.assertEquals(0.0, account.getBalance());
-//
-//        account.withdraw(1);
-//        Assertions.assertEquals(0.0, account.getBalance());
-//    }
-
     @Test
     void walletTest() {
         Wallet wallet = new Wallet();
@@ -44,7 +20,6 @@ class MainTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> wallet.spend(-100));
         Assertions.assertThrows(IllegalArgumentException.class, () -> wallet.spend(0));
         Assertions.assertThrows(IllegalArgumentException.class, () -> wallet.spend(11));
-
     }
 
     @Test
