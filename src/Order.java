@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 public class Order {
 
-    private int orderId = (int) Math.random() * 100 + 1);
+    private int orderId = (int) (Math.random() * 100 + 1);
     private ArrayList<String> items = new ArrayList<>();;
     private double totalPrice;
 
