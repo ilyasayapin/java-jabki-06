@@ -1,6 +1,6 @@
 import java.util.ArrayList;
-
 public class Order {
+
     private int orderId = (int)(Math.random() * 100 + 1);
     private ArrayList<String> items = new ArrayList<>();;
     private double totalPrice;
@@ -13,7 +13,7 @@ public class Order {
         return totalPrice;
     }
 
-    public String getitems() {
+    public ArrayList<String> getItems() {
         return items;
     }
 
@@ -30,7 +30,6 @@ public class Order {
         if (name.equals("") || price < 0) {
             throw new IllegalArgumentException("Проверьте данные заказа");
         } else {
-            this.orderId += 1;
             this.items = this.items + ", " + name;
             this.totalPrice = this.totalPrice + price;
         }
