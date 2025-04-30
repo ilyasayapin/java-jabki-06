@@ -22,9 +22,9 @@ public class Wallet {
 
     public double getBalance() {
         return this.money;
-        }
+    }
 
-    public void deposite(double amount) {
+    public void deposit(double amount) {
         if (amount <= 0) {
             throw new IllegalArgumentException("Введите положительное число");
         } else {

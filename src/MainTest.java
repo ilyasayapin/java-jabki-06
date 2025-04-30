@@ -34,10 +34,10 @@ class MainTest {
         Wallet wallet = new Wallet();
         Assertions.assertEquals(0.0, wallet.getBalance());
 
-        wallet.deposite(100);
+        wallet.deposit(100);
         Assertions.assertEquals(100.0, wallet.getBalance());
-        Assertions.assertThrows(IllegalArgumentException.class, () -> wallet.deposite(-100));
-        Assertions.assertThrows(IllegalArgumentException.class, () -> wallet.deposite(0));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> wallet.deposit(-100));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> wallet.deposit(0));
 
         wallet.spend(90);
         Assertions.assertEquals(10.0, wallet.getBalance());
