@@ -1,13 +1,8 @@
 public class Order {
-    private int orderId = 1;
+    private int orderId = (int)(Math.random() * 100 + 1);
     private String items;
     private double totalPrice;
 
-    Order() {
-        this.orderId = int()(ra);
-        this.items = "Вещь 1, Вещь 2, Вещь 3";
-        this.totalPrice = 100;
-    }
 
     public int getOrderId() {
         return orderId;
