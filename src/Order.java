@@ -30,8 +30,8 @@ public class Order {
         if (name.equals("") || price < 0) {
             throw new IllegalArgumentException("Проверьте данные заказа");
         } else {
-            this.items = this.items + ", " + name;
-            this.totalPrice = this.totalPrice + price;
+            this.items.add(name);
+            this.totalPrice += price;
         }
     }
 }
