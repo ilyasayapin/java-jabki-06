@@ -1,4 +1,5 @@
 public class Game {
+
     private int secretNumber = (int) (Math.random() * 100 + 1);
 
     public int getNumber() {
@@ -17,5 +18,4 @@ public class Game {
             return "Угадал";
         }
     }
-
 }

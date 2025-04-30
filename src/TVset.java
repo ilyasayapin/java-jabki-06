@@ -1,4 +1,5 @@
 public class TVset {
+
     private int currentChannel;
     private int volume;
 
@@ -37,6 +38,5 @@ public class TVset {
         } else {
             this.currentChannel += 1;
         }
-
     }
 }
