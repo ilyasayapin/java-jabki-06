@@ -7,6 +7,7 @@ public class Wallet {
         this.owner = "Супермен";
         this.money = 0;
     }
+
     Wallet(String owner, int money) {
         this.owner = owner;
         this.money = money;
