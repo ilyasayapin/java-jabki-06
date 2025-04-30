@@ -1,5 +1,5 @@
 public class Game {
-    private int secretNumber = (int)(Math.random() * 100 + 1);
+    private int secretNumber = (int) (Math.random() * 100 + 1);
 
     public int getNumber() {
         return this.secretNumber;
