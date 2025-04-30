@@ -1,8 +1,9 @@
+import java.util.ArrayList;
+
 public class Order {
     private int orderId = (int)(Math.random() * 100 + 1);
-    private String items;
+    private ArrayList<String> items = new ArrayList<>();;
     private double totalPrice;
-
 
     public int getOrderId() {
         return orderId;
