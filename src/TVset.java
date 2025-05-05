@@ -1,0 +1,39 @@
+public class TVset {
+
+    private int currentChannel;
+    private int volume;
+
+    TVset() {
+        this.currentChannel = 1;
+        this.volume = 50;
+    }
+
+    public void setChannel(int numOfChannel) {
+        if (numOfChannel < 1 || numOfChannel > 50) {
+            throw new IllegalArgumentException("Номер канала должен быть от 1 до 50");
+        }
+        this.currentChannel = numOfChannel;
+    }
+
+    public void setVolume(int newVolume) {
+        if (newVolume < 0 || newVolume > 100) {
+            throw new IllegalArgumentException("Громкость должна быть от 0 до 100");
+        }
+        this.volume = newVolume;
+    }
+
+    public int getCurrentChannel() {
+        return this.currentChannel;
+    }
+
+    public int getVolume() {
+        return this.volume;
+    }
+
+    public void nextChannel() {
+        if (this.currentChannel == 50) {
+            this.currentChannel = 1;
+        }
+        this.currentChannel += 1;
+    }
+}

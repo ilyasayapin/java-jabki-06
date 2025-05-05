@@ -1,3 +1,5 @@
+import org.junit.jupiter.api.Test;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -131,5 +133,18 @@ public class Main {
          * Контроль — можно добавлять проверку, логи, ограничения
          * Поддержка принципов ООП — чистота архитектуры, удобство масштабирования
          */
+
+        Wallet wallet = new Wallet();
+        wallet.displayInfo();
+
+        Game game = new Game();
+        System.out.println(game.getNumber());
+
+        TVset tvset = new TVset();
+        System.out.println("Канал: " + tvset.getCurrentChannel());
+        System.out.println("Громкость: " + tvset.getVolume());
+
+        Order order = new Order();
+        order.displayCurrentOrder();
     }
 }
