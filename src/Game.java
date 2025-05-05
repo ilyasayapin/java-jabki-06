@@ -9,13 +9,11 @@ public class Game {
     public String chekGuess(int guess) {
         if (guess < 1 || guess > 100) {
             throw new IllegalArgumentException("Число должно быть от 1 до 100");
-        }
-        if (guess > secretNumber) {
+        } else if (guess > secretNumber) {
             return "Больше";
         } else if (guess < secretNumber) {
             return "Меньше";
-        } else {
-            return "Угадал";
         }
+        return "Угадал";
     }
 }
