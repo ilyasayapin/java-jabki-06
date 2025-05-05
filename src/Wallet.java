@@ -27,9 +27,8 @@ public class Wallet {
     public void deposit(double amount) {
         if (amount <= 0) {
             throw new IllegalArgumentException("Введите положительное число");
-        } else {
-            money += amount;
         }
+        money += amount;
     }
 
     public void spend(int amount) {
@@ -37,7 +36,8 @@ public class Wallet {
             throw new IllegalArgumentException("Введите положительное число");
         } else if (this.money <= amount) {
             throw new IllegalArgumentException("Баланс не может уйти в минус");
-        } money -= amount;
+        }
+        money -= amount;
     }
 }
 
